@@ -17,7 +17,7 @@ try:
         diretorios = cur.fetchall()
         for i in range(len(diretorios)):
             for j in range(i+1, len(diretorios)):
-                if diretorios[i][1] == diretorios[j][1]:
+                if (diretorios[i][1]) == (diretorios[j][1]):
                     cur.execute(
                         'Delete from diretorio where id = {}'.format(diretorios[j][0]))
     print("Deletados com Sucesso!!!!!")
